@@ -1,3 +1,3 @@
 Multiplication Table App
 
-dreamthink.github.io/MultiplicationTable
+http://dreamthink.github.io/MultiplicationTable
