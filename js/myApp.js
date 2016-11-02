@@ -13,4 +13,9 @@ angular.module("myApp", [])
 		vm.compute = function(a,b) {
 			return a * b;
 		};
+
+		vm.printPage = function() {
+			window.print();
+		};
+
 	});

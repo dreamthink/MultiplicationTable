@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 	<title>Multiplication Table</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Schoolbell' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<h1 class="text-center">Multiplication Table App</h1>
+	<h1 class="text-center">Multiplication Table</h1>
+		<h2 class="text-center">Enter a number from 2 to 12.</h2>
 		<div class="text-center" ng-controller="MultiplicationCtrl as vm" initial-number-limit="10">
-			<input class="text-center" type="number" ng-model="vm.numberLimit" placeholder="Enter a number">
-			<table>
-				<tr ng-repeat="numberA in vm.numbers()">
-					<td class="text-center" ng-repeat="numberB in vm.numbers()">
+			<input class="text-center inputValue" type="number" ng-model="vm.numberLimit" placeholder="Enter a number" ng-min="2" ng-max="12">
+			<input class="print-btn" type="submit" value="Print" name="Print" ng-click="vm.printPage()">
+			<table ng-cloak>
+				<tr ng-repeat="numberA in vm.numbers()" ng-cloak>
+					<td class="text-center" ng-repeat="numberB in vm.numbers()" ng-cloak>
 						{{ vm.compute(numberA, numberB) }}
 					</td>
 				</tr>
 			</table>
 		</div>
-<script src="js/myApp.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="js/myApp.js"></script>
 </body>
 </html>

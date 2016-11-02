@@ -1,3 +1,7 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
 html {
 	font-family: "Schoolbell", cursive;
 }
@@ -6,9 +10,8 @@ html {
 	text-align: center;
 }
 
-div {
-	padding: 0;
-	margin: 0;
+h2 {
+	margin: 0px;
 }
 
 td, input {
@@ -20,11 +23,24 @@ td, input {
 	background-color: #ffff00;
 }
 
+input {
+	border-radius: 5px;
+	background-color: white;
+}
+
 input:focus {
-	background-color: #00cc00;
+	background-color: white;
 }
 
 table {
 	margin: 0 auto;
 	padding: 0 0 1em 0;
+}
+
+.print-btn:hover {
+	background-color: orange;
+}
+
+.errorMsg {
+	color: red;
 }
